@@ -25,14 +25,12 @@ def age():
     
     distance_of_planet_from_star = (semi_major_axis * ONE_ASRTONOMICAL_UNIT)
     mass_of_users_star = (mass_of_star * ONE_SOLAR_MASS)
-    mu = (GRAVITATIONAL_CONSTANT * mass_of_users_star) # Mu is the Standard Gravitational parameter, used is celestial mechanics
+    mu = (GRAVITATIONAL_CONSTANT * mass_of_users_star) # Mu is the Standard Gravitational parameter, used in celestial mechanics
     
     orbital_period = ((2 * PI) * (math.sqrt(((distance_of_planet_from_star ** 3)/mu))) / SECONDS_IN_ONE_EARTH_YEAR) # This is Kepler's Third Law, aka the equation to find the orbital period of the users planet
-    
-    users_age_on_planet_earth_years = (users_age_on_earth * orbital_period)
     users_age_on_planet_planet_years = (users_age_on_earth / orbital_period)
 
-    users_age_on_planet_earth_years_printed = print(f"The user is {users_age_on_planet_earth_years:.0f} years old on Earth.")
+    users_age_on_planet_earth_years_printed = print(f"The user is {users_age_on_earth} years old on Earth.")
     users_age_on_planet_planet_years_printed = print(f"The user is {users_age_on_planet_planet_years:.0f} years old on {name_of_planet}.")
     print("~"*100)
 
